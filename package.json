@@ -1,5 +1,5 @@
 {
-  "name": "npm-private-remover",
+  "name": "pjson-private-remover",
   "version": "0.0.1",
   "description": "move directory on deployment",
   "main": "index.js",
@@ -15,7 +15,7 @@
     "Readme.md"
   ],
   "bin": {
-    "remove-private": "index.js"
+    "remove-private-field": "index.js"
   },
   "author": "",
   "license": "ISC"

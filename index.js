@@ -24,9 +24,16 @@ program.args = program.args.map(argument=>{
     return argument;
 });
 
-const [location] = program.args;
+let [location] = program.args;
+
+if(!['/','\\'].includes(location[0])) {
+
+    location = '/' + location;
+}
+
 
 const root = process.env.INIT_CWD;
 
-console.log(location);
-console.log(root);
+let object = Fs.readJsonSync(root + location);
+delete object.private;
+Fs.writeJsonSync(object);
