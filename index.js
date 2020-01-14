@@ -36,4 +36,4 @@ const root = process.env.INIT_CWD;
 
 let object = Fs.readJsonSync(root + location);
 delete object.private;
-Fs.writeJsonSync(object);
+Fs.writeJsonSync(root + location, object);
