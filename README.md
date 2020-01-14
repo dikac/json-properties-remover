@@ -1,2 +1,2 @@
-# npm-private-remover
-npm-private-remover
+# pjson-private-remover
+pjson-private-remover
