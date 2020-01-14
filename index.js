@@ -2,7 +2,7 @@
 'use strict';
 
 const Fs = require('fs-extra');
-
+const DotProp = require('dot-prop');
 // Arguments
 const commander = require('commander');
 const program = new commander.Command();
@@ -36,6 +36,12 @@ if(!['/','\\'].includes(location[0])) {
 const root = process.env.INIT_CWD;
 
 let object = Fs.readJsonSync(root + location);
+console.log(object);
 console.log(properties);
-delete object.private;
+for(let propery of properties) {
+
+    DotProp.delete(object, propery);
+}
+console.log(object);
+
 Fs.writeJsonSync(root + location, object);
