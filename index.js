@@ -11,6 +11,7 @@ program.storeOptionsAsProperties(false);
 
 program
     .command('location', 'package.json location')
+    .command('[properties...]', 'properties in dot notation')
     .parse(process.argv);
 
 
@@ -24,7 +25,7 @@ program.args = program.args.map(argument=>{
     return argument;
 });
 
-let [location] = program.args;
+let [location, ...properties] = program.args;
 
 if(!['/','\\'].includes(location[0])) {
 
@@ -35,5 +36,6 @@ if(!['/','\\'].includes(location[0])) {
 const root = process.env.INIT_CWD;
 
 let object = Fs.readJsonSync(root + location);
+console.log(properties);
 delete object.private;
 Fs.writeJsonSync(root + location, object);

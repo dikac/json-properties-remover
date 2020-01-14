@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "commander": "^4.1.0",
+    "dot-prop": "^5.2.0",
     "fs-extra": "^8.1.0"
   },
   "devDependencies": {},
