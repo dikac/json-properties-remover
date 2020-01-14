@@ -1,0 +1,22 @@
+{
+  "name": "npm-private-remover",
+  "version": "0.0.1",
+  "description": "move directory on deployment",
+  "main": "index.js",
+  "dependencies": {
+    "commander": "^4.1.0",
+    "fs-extra": "^8.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {},
+  "files": [
+    "index.js",
+    "LICENSE",
+    "Readme.md"
+  ],
+  "bin": {
+    "remove-private": "index.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

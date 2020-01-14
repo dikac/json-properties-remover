@@ -1,2 +1,2 @@
 # npm-private-remover
-package.json private filed remover
+npm-private-remover
