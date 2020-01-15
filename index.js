@@ -32,7 +32,6 @@ if(!['/','\\'].includes(location[0])) {
     location = '/' + location;
 }
 
-
 const root = process.env.INIT_CWD;
 
 let object = Fs.readJsonSync(root + location);
@@ -41,5 +40,5 @@ for(let propery of properties) {
 
     DotProp.delete(object, propery);
 }
-
-Fs.writeJsonSync(root + location, object);
+let json = JSON.stringify(object, undefined, 4);
+Fs.writeFileSync(root + location, json);
