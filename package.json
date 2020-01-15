@@ -1,6 +1,6 @@
 {
-  "name": "pjson-private-remover",
-  "version": "0.1.0",
+  "name": "json-properties-remover",
+  "version": "0.1.1",
   "description": "move directory on deployment",
   "main": "index.js",
   "dependencies": {
@@ -16,7 +16,7 @@
     "Readme.md"
   ],
   "bin": {
-    "remove-private-field": "index.js"
+    "remove-json-properties": "index.js"
   },
   "author": "",
   "license": "MIT"

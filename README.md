@@ -1,2 +1,2 @@
-# pjson-private-remover
-pjson-private-remover
+# json-properties-remover
+json-properties-remover

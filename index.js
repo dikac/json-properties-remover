@@ -36,12 +36,10 @@ if(!['/','\\'].includes(location[0])) {
 const root = process.env.INIT_CWD;
 
 let object = Fs.readJsonSync(root + location);
-console.log(object);
-console.log(properties);
+
 for(let propery of properties) {
 
     DotProp.delete(object, propery);
 }
-console.log(object);
 
 Fs.writeJsonSync(root + location, object);
