@@ -32,7 +32,7 @@ if(!['/','\\'].includes(location[0])) {
     location = '/' + location;
 }
 
-const root = process.env.INIT_CWD;
+const root = process.cwd();
 
 let object = Fs.readJsonSync(root + location);
 
